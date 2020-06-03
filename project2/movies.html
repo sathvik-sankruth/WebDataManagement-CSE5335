@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display Movie Information</title>
+    <meta charset="utf-8"/>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .coloumn {
+        float: left;
+        padding: 10px;
+        height: 300px;
+      }
+
+      .left {
+        width: 25%;
+      }
+
+      .right {
+        width: 75%;
+      }
+
+      .row:after {
+        content: "";
+        text-align: center;
+        display: table;
+        clear: both;
+      }
+    </style>
+    <script type="text/javascript" src="movies.js"></script>
+  </head>
+  <body  onload="initialize();">
+    <form>
+       <label>Movie title: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+    </form>
+    <div class="row">
+      <div class="coloumn left">
+        <div id="output">&nbsp;</div>
+       </div>
+       <div class="coloumn right"> 
+        <div  id="output1">&nbsp;</div>
+        <div id="output2">&nbsp;</div>
+        <div id="output3">&nbsp;</div>
+      </div>
+    </div>
+  </body>
+</html>

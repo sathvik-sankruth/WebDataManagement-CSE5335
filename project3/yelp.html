@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Student Name: Satrhvik Kapaleshwara Sankruth  -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+     <style>
+      #map {
+        height: 500px;
+        width: 600px;
+      }
+      * {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 600px; 
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+div.output{
+  height: 500px;
+    overflow: scroll;
+}
+    </style>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+
+    <div class="row">
+      <div class="column left">
+        <div class="output" id="output">&nbsp;</div>
+        
+      </div>
+      <div class="column right">
+        <div id="output1">&nbsp;</div>
+        <div id="map"></div>
+        
+      </div>
+    </div>
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvxdSXSQBuwYeIL4aiWrWbWByUhN-zfDY&libraries=geometry&callback=initMap"
+    async defer></script>
+
+  </body>
+</html>
