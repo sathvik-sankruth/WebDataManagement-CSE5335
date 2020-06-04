@@ -8,10 +8,7 @@ function initialize(){
 	ch=document.getElementById('court').style.height;
 	cw=document.getElementById('court').style.width;
 	document.getElementById('score').innerHTML=0;
-	//document.getElementById('ball').style.left=0+'px';
-	//document.getElementById('ball').style.top=Math.floor(Math.random() * (400 - 0) + 0)+'px';
-	//var val=parseInt(document.getElementById('score').innerHTML);
-	//console.log(val);
+	
 
 }
 function movePaddle(e){
@@ -25,8 +22,7 @@ function movePaddle(e){
 	else{
 	pad.style.top=e.clientY-'150'+'px';		
 	}
-	//document.getElementById('messages').innerHTML='x '+x+' y '+y;
-	//document.getElementById('messages').innerHTML='ch'+ch+'cw'+cw;
+	
 
 }
 function pausegame(){
@@ -56,10 +52,6 @@ function startGame(){
 		//initialize();		
 		return;
 
-		//clearTimeout(to);
-		//document.getElementById('ball').style.left=0+'px';
-		//document.getElementById('ball').style.top=0+'px';
-
 	}
 	if(x>750){
 		if((y+80)>=parseInt(document.getElementById('paddle').style.top) && (y+80)<parseInt(document.getElementById('paddle').style.top)+80) {
@@ -73,10 +65,6 @@ function startGame(){
 		vx=-1*vx;
 	}
 	
-	//document.getElementById('messages').innerHTML=parseInt(document.getElementById('paddle').style.top);
-	//document.getElementById('messages').innerHTML=parseInt(document.getElementById('paddle').style.top)+20;
-	
-	//document.getElementById('messages').innerHTML='x '+x+' y '+y;
 	
 	document.getElementById('ball').style.left=x+'px';
 	document.getElementById('ball').style.top=y+'px';
